@@ -1,13 +1,23 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+
+function Header() {
+  return (
+    <header style={{ display: 'flex', justifyContent: 'space-between', padding: 20 }}>
+      <h1>Learning Path Dashboard</h1>
+      <SignedIn>
+        {/* Mount the UserButton component */}
+        <UserButton />
+      </SignedIn>
+      <SignedOut>
+        {/* Signed out users get sign in button */}
+        <SignInButton />
+      </SignedOut>
+    </header>
+  )
+}
 
 export const metadata = {
   title: "Learning Path Dashboard",
