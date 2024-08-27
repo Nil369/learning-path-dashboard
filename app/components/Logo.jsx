@@ -1,15 +1,10 @@
 import React from "react";
-import Image from "next/image";
 
 const Logo = () => {
   return (
     
-    <Image
-    height={150}
-    width={150}
-    alt="Logo"
-    src="/logo.svg"
-    />
+    
+    <h1 className="text-3xl mb-20 text-cyan-400 font-extrabold font-['Gaoel']">Edu<span className="text-3xl mb-20 text-orange-500 font-extrabold font-['Gaoel']">Nexus</span></h1>
     
   )
 };
