@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="20" viewBox="0 0 30 20">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 1.883px;
+        font-family: Gaoel;
+      }
+
+      .cls-1 {
+        fill: #34f5dc;
+      }
+
+      .cls-2 {
+        fill: #ff9000;
+      }
+    </style>
+  </defs>
+  <image id="Background" width="30" height="20" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAYAAACaq43EAAAAKElEQVRIie3NMQEAAAjDsIJ/z8MFexoDmSShYBspxsbGxsbGxsb/gANo+AQkqjqI+gAAAABJRU5ErkJggg=="/>
+  <text id="Edu" class="cls-1" transform="translate(1.486 5.797) scale(2.616)">Edu</text>
+  <text id="Nexus" class="cls-2" transform="translate(12.254 5.315) scale(2.379)">Nexus</text>
+</svg>

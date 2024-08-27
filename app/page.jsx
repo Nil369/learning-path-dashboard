@@ -6,7 +6,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-      <UserButton afterSignOutUrl="/"/>
       <h1 className="text-4xl text-sky-500 font-semibold">
         This is HOME PAGE
       </h1>
