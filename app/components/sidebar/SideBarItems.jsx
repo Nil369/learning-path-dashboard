@@ -1,5 +1,5 @@
 "use client";
-import { LucideIcon } from "lucide-react";
+
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
@@ -7,6 +7,7 @@ export const SidebarItem = ({ icon: Icon, label, href }) => {
   const pathname = usePathname();
   const router = useRouter();
 
+  // check if the user is on the dashboard page or not
   const isActive =
     (pathname === "/dashboard" && href === "/dashboard") ||
     pathname === href ||
@@ -26,7 +27,6 @@ export const SidebarItem = ({ icon: Icon, label, href }) => {
     ${isActive ? 'text-sky-700' : ''}
   `;
 
-  
 
   return (
     <div>
