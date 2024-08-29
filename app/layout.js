@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
+import HeaderNav from "./components/Home/nav/Header";
+
 import {
   ClerkProvider,
   SignedIn,
