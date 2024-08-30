@@ -20,19 +20,21 @@ const HeaderNav = () => {
           <div className="ml-7 mr-2 mb-4 ">
             <Search />
           </div>
-          <nav class="md:ml-auto md:mr-auto flex flex-wrap gap-x-3 items-center text-md justify-center ">
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap gap-x-3 items-center text-xs justify-center ">
             <Link
               className="flex flex-wrap gap-x-2 hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
               href="/"
             >
-              <Home/>
+
+              <Home className="h-4"/>
+
               Home
             </Link>
             <Link
               className="flex flex-wrap gap-x-2 hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
               href="/courses"
             >
-              <LibraryBig/>
+              <LibraryBig className="h-4" />
               Courses
             </Link>
 
@@ -40,14 +42,14 @@ const HeaderNav = () => {
               className="flex flex-wrap gap-x-2 hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
               href="/pricing"
             >
-              <CreditCard/>
+              <CreditCard className="h-4"/>
               Pricing
             </Link>
             <Link
               className="flex flex-wrap gap-x-2 hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
               href="/"
             >
-              <GraduationCap/>
+              <GraduationCap className="h-4"/>
               Become Instructor
             </Link>
 
@@ -61,7 +63,7 @@ const HeaderNav = () => {
               </Link>
               <Link href="/sign-up">
                 <Button size="sm" variant="ghost">
-                <DoorOpen/>
+                <DoorOpen className="h-4"/>
                   Register
                 </Button>
               </Link>
