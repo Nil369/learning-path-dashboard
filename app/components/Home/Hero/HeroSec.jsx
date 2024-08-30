@@ -12,23 +12,43 @@ const HeroSec = () => {
           <h1 className="title-font text-4xl md:text-5xl lg:text-6xl mb-4 font-bold leading-tight">
             First Education Theme
             <br className="hidden lg:inline-block" />
-            <span className="text-blue-700">For Marketplace</span>
+            <span className="text-blue-700 ml-3 md:ml-0">For Marketplace</span>
           </h1>
 
           <p className="mb-8 text-base md:text-lg leading-relaxed">
-            This will be the best place for anyone to sell courses online, with all the necessary eCommerce features. This is Eduma - Education WordPress Theme.
+            This will be the best place for anyone to sell courses online, with all the necessary eCommerce features. This is EduNexus - A Learning Path Dashboard.
           </p>
-          
+
           <div className="flex flex-col md:flex-row justify-center md:justify-start gap-4">
             <Link href="/dashboard">
-              <Button variant="cyan" className="w-full md:w-auto px-20 py-6 text-md">
+              <Button variant="blue" className="w-full md:w-auto px-20 py-6 text-md">
                 Get Started
+              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/iagdobvi.json"
+                  trigger="hover"
+                  stroke="bold"
+                  colors="primary:#ffffff,secondary:#ffffff"
+                  class="h-7 ml-2"
+                  >
+              </lord-icon>
+
               </Button>
             </Link>
 
             <Link href="/courses">
               <Button variant="outline" className="w-full md:w-auto px-20 py-6 text-md">
                 View Courses
+              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/vfczflna.json"
+                  trigger="hover"
+                  stroke="bold"
+                  colors="primary:#919294,secondary:#30c9e8"
+                  class="h-7 ml-2"
+                  >
+              </lord-icon>
+
               </Button>
             </Link>
           </div>

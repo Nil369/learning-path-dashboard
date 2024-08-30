@@ -23,6 +23,12 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        lamaSky: "#C3EBFA",
+        lamaSkyLight: "#EDF9FD",
+        lamaPurple: "#9c9afc",
+        lamaPurpleLight: "#F1F0FF",
+        lamaYellow: "#fcdd56",
+        lamaYellowLight: "#FEFCE8",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -74,6 +80,7 @@ module.exports = {
         'gunmetalgray': '#363636',
         'gray-blue': 'rgba(105, 120, 131, 0.16)',
         'dark-red': 'rgba(44, 9, 11, 0.8)',
+
       },
       fontSize: {
         xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -91,7 +98,7 @@ module.exports = {
         '9xl': ['8rem', { lineHeight: '1' }],
         '55xl': ['55px', { lineHeight: '1' }],
         '22xl': ['22px', { lineHeight: '1' }],
-  
+
       },
       borderRadius: {
         lg: "var(--radius)",

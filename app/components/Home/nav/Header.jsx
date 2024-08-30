@@ -20,53 +20,103 @@ const HeaderNav = () => {
           <div className="ml-7 mr-2 mb-4 ">
             <Search />
           </div>
-          <nav class="md:ml-auto md:mr-auto flex flex-wrap gap-x-3 items-center text-xs justify-center ">
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap gap-x-3 items-center text-sm justify-center ">
             <Link
-              className="flex flex-wrap gap-x-2 hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
+              className="flex flex-wrap  hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
               href="/"
             >
 
-              <Home className="h-4"/>
+              {/* <Home className="h-4"/> */}
+
+              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/laqlvddb.json"
+                  trigger="hover"
+                  stroke="bold"
+                  colors="primary:#919294,secondary:#30c9e8"
+                  class="h-4"
+                  >
+              </lord-icon>
+
 
               Home
             </Link>
             <Link
-              className="flex flex-wrap gap-x-2 hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
+              className="flex flex-wrap hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
               href="/courses"
             >
-              <LibraryBig className="h-4" />
+              {/* <LibraryBig className="h-4" /> */}
+              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/lenjvibx.json"
+                  trigger="hover"
+                  stroke="bold"
+                  colors="primary:#919294,secondary:#30c9e8"
+                  class="h-4"
+                  >
+              </lord-icon>
               Courses
             </Link>
 
             <Link
-              className="flex flex-wrap gap-x-2 hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
+              className="flex flex-wrap hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
               href="/pricing"
             >
-              <CreditCard className="h-4"/>
+              {/* <CreditCard className="h-4"/> */}
+              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/wyqtxzeh.json"
+                  trigger="hover"
+                  stroke="bold"
+                  colors="primary:#919294,secondary:#30c9e8"
+                  class="h-4"
+                  >
+              </lord-icon>
               Pricing
             </Link>
             <Link
-              className="flex flex-wrap gap-x-2 hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
+              className="flex flex-wrap hover:border-b-4 border-cyan-500 hover:text-md hover:font-bold"
               href="/"
             >
-              <GraduationCap className="h-4"/>
+              {/* <GraduationCap className="h-4"/> */}
+              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/gkgkfbzm.json"
+                  trigger="hover"
+                  stroke="bold"
+                  colors="primary:#919294,secondary:#30c9e8"
+                  class="h-4"
+                  >
+              </lord-icon>
               Become Instructor
             </Link>
 
             <div>
-              <Link href="/dashboard">
-                <Button size="sm" variant="cyan">
-                <Image width={20} height={20} src="/user.gif" className=""/>
-                  Login
-                </Button>
 
-              </Link>
-              <Link href="/sign-up">
-                <Button size="sm" variant="ghost">
+            <Link href="/sign-up">
+                <Button size="sm" variant="ghost" className="mr-2">
                 <DoorOpen className="h-4"/>
                   Register
                 </Button>
               </Link>
+
+              <Link href="/dashboard">
+                <Button size="sm" variant="blue">
+                {/* <Image width={20} height={20} src="/user.gif" className=""/> */}
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/bgebyztw.json"
+                  trigger="hover"
+                  stroke="bold"
+                  colors="primary:#ffffff,secondary:#ffffff"
+                  class="h-4"
+                  >
+              </lord-icon>
+                  Login
+                </Button>
+
+              </Link>
+
             </div>
 
           </nav>
