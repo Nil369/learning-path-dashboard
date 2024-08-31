@@ -5,6 +5,7 @@ import { Search } from "./searchBar";
 import Image from "next/image";
 import { CreditCard, DoorOpen, GraduationCap, Home, LibraryBig } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Script from "next/script";
 
 const HeaderNav = () => {
   return (
@@ -28,7 +29,7 @@ const HeaderNav = () => {
 
               {/* <Home className="h-4"/> */}
 
-              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <Script src="https://cdn.lordicon.com/lordicon.js"></Script>
               <lord-icon
                   src="https://cdn.lordicon.com/laqlvddb.json"
                   trigger="hover"
@@ -46,7 +47,7 @@ const HeaderNav = () => {
               href="/courses"
             >
               {/* <LibraryBig className="h-4" /> */}
-              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <Script src="https://cdn.lordicon.com/lordicon.js"></Script>
               <lord-icon
                   src="https://cdn.lordicon.com/lenjvibx.json"
                   trigger="hover"
@@ -63,7 +64,7 @@ const HeaderNav = () => {
               href="/pricing"
             >
               {/* <CreditCard className="h-4"/> */}
-              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <Script src="https://cdn.lordicon.com/lordicon.js"></Script>
               <lord-icon
                   src="https://cdn.lordicon.com/wyqtxzeh.json"
                   trigger="hover"
@@ -79,7 +80,7 @@ const HeaderNav = () => {
               href="/"
             >
               {/* <GraduationCap className="h-4"/> */}
-              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <Script src="https://cdn.lordicon.com/lordicon.js"></Script>
               <lord-icon
                   src="https://cdn.lordicon.com/gkgkfbzm.json"
                   trigger="hover"
@@ -103,7 +104,7 @@ const HeaderNav = () => {
               <Link href="/dashboard">
                 <Button size="sm" variant="blue">
                 {/* <Image width={20} height={20} src="/user.gif" className=""/> */}
-                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <Script src="https://cdn.lordicon.com/lordicon.js"></Script>
               <lord-icon
                   src="https://cdn.lordicon.com/bgebyztw.json"
                   trigger="hover"

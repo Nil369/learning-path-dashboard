@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import React from "react";
 
 const HeroSec = () => {
@@ -23,7 +24,7 @@ const HeroSec = () => {
             <Link href="/dashboard">
               <Button variant="blue" className="w-full md:w-auto px-20 py-6 text-md">
                 Get Started
-              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <Script src="https://cdn.lordicon.com/lordicon.js"></Script>
               <lord-icon
                   src="https://cdn.lordicon.com/iagdobvi.json"
                   trigger="hover"
@@ -39,7 +40,7 @@ const HeroSec = () => {
             <Link href="/courses">
               <Button variant="outline" className="w-full md:w-auto px-20 py-6 text-md">
                 View Courses
-              <script src="https://cdn.lordicon.com/lordicon.js"></script>
+              <Script src="https://cdn.lordicon.com/lordicon.js"></Script>
               <lord-icon
                   src="https://cdn.lordicon.com/vfczflna.json"
                   trigger="hover"
