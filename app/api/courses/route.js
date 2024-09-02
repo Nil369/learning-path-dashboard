@@ -1,0 +1,27 @@
+import { db } from "@/lib/db";
+import { auth } from "@clerk/nextjs/server";
+import { NextResponse } from "next/server";
+
+export async function POST(req) {
+    try {
+        const { userId } = auth();
+
+        const { title } = await req.json();  // Destructure the title from the JSON body
+
+        if (!userId) {
+            return new NextResponse("Unauthorized", { status: 401 });
+        }
+
+        const course = await db.course.create({
+            data: {
+                userId,
+                title,
+            },
+        });
+
+        return NextResponse.json(course); // Return the created course as a JSON response
+    } catch (error) {
+        console.log("[COURSES]: ", error);
+        return new NextResponse("Internal Server Error", { status: 500 });
+    }
+}

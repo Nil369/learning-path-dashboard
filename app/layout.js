@@ -11,6 +11,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import { ThemeProvider } from "../app/components/theme-provider";
+import { ToastProvider } from "@/components/provider/toaster-provider";
 
 function Header() {
   return (
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
             enableSystem
             disableTransitionOnChange
           >
+            <ToastProvider/>
             {children}
           </ThemeProvider>
         </body>
