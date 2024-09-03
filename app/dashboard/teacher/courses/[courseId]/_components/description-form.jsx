@@ -19,17 +19,19 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { Pencil } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
-  title: z.string().min(1, {
-    message: "Title is required!",
-  }),
+    description: z.string().min(1, {
+        message: "Description is required!",
+      }),
 });
 
-const TitleForm = ({ initialData, courseId }) => {
+const DescriptionForm = ({ initialData, courseId }) => {
   const form = useForm({
     resolver: zodResolver(formSchema),
-    defaultValues: initialData,
+    defaultValues: initialData.description||"",
   });
 
   const { isSubmitting, isValid } = form.formState;
@@ -44,7 +46,7 @@ const TitleForm = ({ initialData, courseId }) => {
     console.log(values)
     try {
       await axios.patch(`/api/courses/${courseId}`, values);
-      toast.success("Course title updated successfully!");
+      toast.success("Course updated!");
       toggleEdit();
       router.refresh();
 
@@ -56,7 +58,7 @@ const TitleForm = ({ initialData, courseId }) => {
   return (
     <div className="mt-6 bg-slate-100 rounded-md p-4 text-black">
       <div className="font-medium flex items-center justify-between ">
-        Course Title
+        Course Description
         <Button variant="ghost" onClick={toggleEdit}>
           {isEditing && <>Cancel</>}
           {!isEditing && (
@@ -67,9 +69,17 @@ const TitleForm = ({ initialData, courseId }) => {
           )}
         </Button>
       </div>
+      {!isEditing &&(
+         <p className={cn("text-sm mt-2",
+            !initialData.description && "text-slate-500 italic"
+         )}>            
+        {initialData.description || "No Description"}
+        </p>
+      )}
       <div>
         {isEditing && (
-          // <p className="text-sm mt-2">{initialData.title}</p>
+        
+         
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
@@ -77,15 +87,15 @@ const TitleForm = ({ initialData, courseId }) => {
             >
               <FormField
                 control={form.control}
-                name="title"
+                name="description"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
-                      <Input
+                      <Textarea
                         disabled={isSubmitting}
-                        placeholder="e.g. 'Advance Python Course'"
-                        {...field}
                         className="bg-white"
+                        placeholder="e.g. 'This course is about...'"
+                        {...field}
                       />
                     </FormControl>
                     <FormMessage />
@@ -103,10 +113,12 @@ const TitleForm = ({ initialData, courseId }) => {
               </div>
             </form>
           </Form>
+
         )}
       </div>
     </div>
+    
   );
 };
 
-export default TitleForm;
+export default DescriptionForm;
